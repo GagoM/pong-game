@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Press Start 2P", cursive;
+        background-color: #000;
+        color: #00ff00;
+        text-align: center;
+        padding-top: 50px;
+        font-size: 40px;
+        letter-spacing: 2px;
+        margin: 0;
+      }
+      #menu {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-inline: auto;
+        width: fit-content;
+        top: 20%;
+        padding: 40px;
+      }
+      .start-btn {
+        cursor: pointer;
+        transition: 0.2s all;
+        padding: 10px;
+      }
+      .start-btn:hover {
+        transform: scale(1.2);
+        background-color: #00ff00;
+        color: #000;
+      }
+      #game-over,
+      #start-game {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      #game-over {
+        display: none;
+      }
+      #score-wrapper {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        display: flex;
+        gap: 5px;
+      }
+    </style>
+    <script src="https://pixijs.download/release/pixi.js"></script>
+  </head>
+  <body>
+    <script src="./index.js"></script>
+    <div id="score-wrapper">
+      <div id="score-title">SCORE:</div>
+      <div id="score">0</div>
+    </div>
+    <div id="menu">
+      <div id="start-game">
+        <h1>PONG</h1>
+        <h5 class="start-btn" onclick="startGame()">START GAME</h5>
+      </div>
+      <div id="game-over">
+        <h3>GAME OVER :(</h3>
+        <h5 class="start-btn" onclick="startGame()">START ANOTHER GAME</h5>
+      </div>
+    </div>
+  </body>
+</html>
